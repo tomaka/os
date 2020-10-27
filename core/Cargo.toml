@@ -44,6 +44,9 @@ wasmi = { git = "https://github.com/tomaka/wasmi", branch = "no-std", default-fe
 criterion = "0.3"
 futures = { version = "0.3.1", default-features = false, features = ["executor"] }
 
+[target.'cfg(target_arch = "x86_64")'.dependencies]
+wasmtime = { version = "0.13.0", default-features = false }
+
 [[bench]]
 name = "keccak"
 harness = false

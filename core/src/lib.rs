@@ -110,12 +110,15 @@
 //! handler.
 //!
 
+#![feature(asm, global_asm, naked_functions)]
+#![feature(new_uninit)] // TODO: no; definitely can be circumvented too
 #![warn(missing_docs)]
 //#![deny(unsafe_code)] // TODO: 🤷
 #![allow(dead_code)] // TODO: temporary during development
 
 // The crate uses the stdlib for testing purposes.
-#![cfg_attr(not(test), no_std)]
+// TODO: restore no_std
+//#![cfg_attr(not(test), no_std)]
 
 extern crate alloc;
 

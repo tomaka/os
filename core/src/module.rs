@@ -20,7 +20,10 @@ use core::fmt;
 /// This is the equivalent of an [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
 /// or a [PE](https://en.wikipedia.org/wiki/Portable_Executable).
 pub struct Module {
+    #[cfg(not(target_arch = "x86_64"))]
     inner: wasmi::Module,
+    #[cfg(target_arch = "x86_64")]
+    bytes: Vec<u8>,
     hash: ModuleHash,
 }
 
@@ -39,15 +42,28 @@ pub struct FromBase58Error {}
 impl Module {
     /// Parses a module from WASM bytes.
     pub fn from_bytes(buffer: impl AsRef<[u8]>) -> Result<Self, FromBytesError> {
-        let inner = wasmi::Module::from_buffer(buffer.as_ref()).map_err(|_| FromBytesError {})?;
+        let buffer = buffer.as_ref();
         let hash = ModuleHash::from_bytes(buffer);
 
-        Ok(Module { inner, hash })
+        Ok(Module {
+            #[cfg(not(target_arch = "x86_64"))]
+            inner: wasmi::Module::from_buffer(buffer.as_ref()).map_err(|_| FromBytesError {})?,
+            #[cfg(target_arch = "x86_64")]
+            bytes: buffer.to_owned(),
+            hash,
+        })
     }
 
     /// Returns a reference to the internal module.
+    #[cfg(not(target_arch = "x86_64"))]
     pub(crate) fn as_ref(&self) -> &wasmi::Module {
         &self.inner
+    }
+
+    /// Returns the Wasm binary.
+    #[cfg(target_arch = "x86_64")]
+    pub(crate) fn as_ref(&self) -> &[u8] {
+        &self.bytes
     }
 
     /// Returns the hash of that module.
