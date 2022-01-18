@@ -10,7 +10,7 @@ publish = false
 derive_more = "0.99.17"
 fnv = { version = "1.0.7", default-features = false }
 hashbrown = { version = "0.11.2", default-features = false }
-iced-x86 = { version = "1.14.0", default-features = false, features = ["decoder", "instr_info", "op_code_info", "std"] }
+iced-x86 = { version = "1.15.0", default-features = false, features = ["decoder", "instr_info", "op_code_info", "std"] }
 lazy_static = "1"
 log = "0.4"
 redshirt-hardware-interface = { path = "../../interfaces/hardware" }
