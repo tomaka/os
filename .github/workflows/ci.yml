@@ -60,8 +60,8 @@ jobs:
     runs-on: ubuntu-20.04  # TODO: for the more recent QEmu version compared to ubuntu-18
     strategy:
       matrix:
-        #target: [x86_64-multiboot2, arm-rpi2]  # TODO: not implemented
-        target: [x86_64-multiboot2]
+        #target: [x86_64-multiboot2, arm-rpi3, riscv-hifive]  # TODO: not implemented
+        target: [x86_64-multiboot2, riscv-hifive]
     steps:
     - uses: actions/checkout@v3
     - name: Download WASM programs
