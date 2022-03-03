@@ -31,7 +31,7 @@ redshirt-system-time-interface = { path = "../../interfaces/system-time", defaul
 redshirt-time-interface = { path = "../../interfaces/time", default-features = false }
 rand = { version = "0.8.3", default-features = false }
 rand_chacha = { version = "0.3.0", default-features = false }
-rand_core = { version = "0.6.0", default-features = false }
+rand_core = { version = "0.6.2", default-features = false }
 slab = { git = "https://github.com/tokio-rs/slab", default-features = false, rev = "3340fdcf7204584b9ee509beabf3b174a333dfc1" }
 smallvec = { version = "1.6.1", default-features = false }
 spinning_top = "0.2.2"

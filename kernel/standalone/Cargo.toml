@@ -21,7 +21,7 @@ linked_list_allocator = { version = "0.9.0", features = ["alloc_ref"] }
 nohash-hasher = { version = "0.2.0", default-features = false }
 pin-project = "1.0.5"
 rand_chacha = { version = "0.2.0", default-features = false }
-rand_core = { version = "0.5.1", default-features = false }
+rand_core = { version = "0.6.2", default-features = false }
 rand_jitter = { version = "0.3.0", default-features = false }
 redshirt-core = { path = "../core", features = ["nightly"] }
 redshirt-hardware-interface = { path = "../../interfaces/hardware", default-features = false }
