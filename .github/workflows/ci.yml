@@ -65,7 +65,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Download WASM programs
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: wasm-programs
     - name: Install required packages
