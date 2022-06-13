@@ -7,6 +7,6 @@ edition = "2018"
 
 [dependencies]
 futures = "0.3"
-parity-scale-codec = { version = "1.3.6", features = ["derive"] }
+parity-scale-codec = { version = "3.1.5", features = ["derive"] }
 redshirt-random-interface = { path = "../random", default-features = false }
 redshirt-syscalls = { path = "../syscalls", default-features = false }
