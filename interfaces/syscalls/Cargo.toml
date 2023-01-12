@@ -8,7 +8,7 @@ edition = "2018"
 [dependencies]
 futures = { version = "0.3.13", default-features = false, features = ["alloc"] }
 generic-array = { version = "0.14.4", default-features = false }
-hashbrown = { version = "0.9.1", default-features = false }
+hashbrown = { version = "0.13.2", default-features = false }
 lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
 nohash-hasher = { version = "0.2.0", default-features = false }
 parity-scale-codec = { version = "1.3.6", default-features = false, features = ["derive"] }

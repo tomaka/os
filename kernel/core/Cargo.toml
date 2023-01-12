@@ -18,7 +18,7 @@ crossbeam-queue = { version = "0.3.1", default-features = false, features = ["al
 either = { version = "1.6.1", default-features = false }
 fnv = { version = "1.0.7", default-features = false }
 futures = { version = "0.3.13", default-features = false }
-hashbrown = { version = "0.9.1", default-features = false }
+hashbrown = { version = "0.13.2", default-features = false }
 nohash-hasher = { version = "0.2.0", default-features = false }
 redshirt-core-proc-macros = { path = "../core-proc-macros" }
 redshirt-interface-interface = { path = "../../interfaces/interface", default-features = false }
