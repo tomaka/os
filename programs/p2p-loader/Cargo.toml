@@ -14,7 +14,7 @@ base64 = { version = "0.13.0", default-features = false, features = ["alloc"] }
 blake3 = { version = "1.3.1", default-features = false }
 bs58 = "0.4.0"
 futures = "0.3"
-git2 = { version = "0.13.25", optional = true }
+git2 = { version = "0.16.1", optional = true }
 libp2p = { version = "0.23.0", default-features = false, features = ["kad", "noise", "yamux"] }
 log = "0.4"
 notify = { version = "4.0.17", optional = true }
