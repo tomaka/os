@@ -1428,11 +1428,10 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.2.0"
+version = "1.18.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e8190d04c665ea9e6b6a0dc45523ade572c088d2e6566244c1122671dbf4ae3a"
+checksum = "0e050c618355082ae5a89ec63bbf897225d5ffe84c7c4e036874e4d185a5044e"
 dependencies = [
- "autocfg",
  "pin-project-lite",
 ]
 
