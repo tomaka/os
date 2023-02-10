@@ -11,4 +11,4 @@ redshirt-hardware-interface = { path = "../../interfaces/hardware" }
 redshirt-interface-interface = { path = "../../interfaces/interface" }
 redshirt-log-interface = { path = "../../interfaces/log" }
 redshirt-syscalls = { path = "../../interfaces/syscalls" }
-parity-scale-codec = { version = "1.3.6", default-features = false }
+parity-scale-codec = { version = "3.4.0", default-features = false }

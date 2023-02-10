@@ -20,7 +20,7 @@ log = "0.4"
 notify = { version = "4.0.17", optional = true }
 # openssl-sys is not used directly, but we want to pass the "vendored" feature
 openssl-sys = { version = "0.9.72", features = ["vendored"], optional = true }
-parity-scale-codec = "1.3.6"
+parity-scale-codec = "3.4.0"
 structopt = "0.3.26"
 tempdir = "0.3.7"
 walkdir = "2.3.2"
