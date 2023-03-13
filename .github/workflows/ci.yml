@@ -19,7 +19,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y cmake clang-10
-    - uses: actions/cache@v2.1.7
+    - uses: actions/cache@v3.3.1
       with:
         path: |
           ~/.cargo/registry
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/cache@v2.1.7
+    - uses: actions/cache@v3.3.1
       with:
         path: |
           ~/.cargo/registry
@@ -75,7 +75,7 @@ jobs:
     - run: |
         sudo apt-get install qemu-utils qemu-system-x86
       if: ${{ matrix.target == 'x86_64-multiboot2'}}
-    - uses: actions/cache@v2.1.7
+    - uses: actions/cache@v3.3.1
       with:
         path: |
           ~/.cargo/registry
@@ -112,7 +112,7 @@ jobs:
         toolchain: stable
         override: true
     - name: Cache cargo registry
-      uses: actions/cache@v2.1.7
+      uses: actions/cache@v3.3.1
       with:
         path: |
           ~/.cargo/registry
@@ -167,7 +167,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y clang-10
-      - uses: actions/cache@v2.1.7
+      - uses: actions/cache@v3.3.1
         with:
           path: |
             ~/.cargo/registry
